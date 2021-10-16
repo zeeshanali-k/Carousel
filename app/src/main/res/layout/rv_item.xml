@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/day_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Fri"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/div1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:gravity="center"
+                android:text="OCT 14"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/div1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/day_tv" />
+
+            <TextView
+                android:id="@+id/year_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:gravity="center"
+                android:text="2021"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/div1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/date_tv" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/fav_btn"
+                android:src="@drawable/ic_baseline_favorite_border_24"
+                app:layout_constraintEnd_toStartOf="@id/div1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/year_tv"
+                app:tint="@color/not_fav" />
+
+            <View
+                android:id="@+id/div1"
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:layout_marginVertical="5dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/grey"
+                app:layout_constraintBottom_toBottomOf="@id/fav_btn"
+                app:layout_constraintStart_toEndOf="@id/date_tv"
+                app:layout_constraintTop_toTopOf="@id/day_tv" />
+
+            <TextView
+                android:id="@+id/item_title_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:ellipsize="marquee"
+                android:gravity="start"
+                android:lines="2"
+                android:text="ST. Louis Cardinal at Chicago Cubs (Rescheduled from July 11 , 2021) Testing"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/div1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="7:46 pm ."
+                android:textColor="@color/light_grey"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@id/item_title_tv"
+                app:layout_constraintTop_toBottomOf="@id/item_title_tv" />
+
+            <TextView
+                android:id="@+id/location_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="start"
+                android:lines="1"
+                android:text="Chicago IL - Wrigley Field"
+                android:textColor="@color/light_grey"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@id/item_title_tv"
+                app:layout_constraintStart_toEndOf="@id/time_tv"
+                app:layout_constraintTop_toBottomOf="@id/item_title_tv" />
+
+            <TextView
+                android:id="@+id/tickets_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="start"
+                android:lines="1"
+                android:text="1050 Tickets Left"
+                android:textColor="@color/light_grey"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@id/item_title_tv"
+                app:layout_constraintTop_toBottomOf="@id/time_tv" />
+
+            <TextView
+                android:id="@+id/ticket_price_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="start"
+                android:lines="1"
+                android:text="From 25$"
+                android:textColor="@color/pink_color"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tickets_tv"
+                app:layout_constraintTop_toBottomOf="@id/time_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/grey" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
